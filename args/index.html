@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>演習：映画館チケット購入（複数の引数）</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <h1>映画館チケット購入</h1>
+
+  <div class="buttons">
+    <button @click="buyTicket('一般', 2000, 1)">
+      一般 ×1
+    </button>
+
+    <button @click="buyTicket('一般', 2000, 2)">
+      一般 ×2
+    </button>
+
+    <button @click="buyTicket('学生', 1500, 1)">
+      学生 ×1
+    </button>
+
+    <button @click="buyTicket('学生', 1500, 3)">
+      学生 ×3
+    </button>
+  </div>
+
+  <div class="result">
+    <p>{{ message }}</p>
+    <p v-if="total > 0">
+      合計金額：{{ total.toLocaleString() }} 円
+    </p>
+  </div>
+</div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>演習：マウス座標取得（$event）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+	<h1>マウス座標取得</h1>
+	
+	<p>
+	  エリア内をクリックしてください。
+	</p>
+	
+	<div class="area" @click="showPosition($event)">
+	  <div
+	    v-show="showPoint"
+	    class="point"
+	    :style="{
+	      left: x + 'px',
+	      top: y + 'px'
+	    }"
+	  ></div>
+	</div>
+	
+	<p>
+	  {{ message }}
+	</p>
+</div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

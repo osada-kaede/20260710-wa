@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>演習：プレゼントボックス .once</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>プレゼントボックス</h1>
+
+    <p class="gift">{{gift}}</p>
+
+    	<button	@click.once="openGift">プレゼントを開ける</button>
+	
+	<p>{{ message }}</p>
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

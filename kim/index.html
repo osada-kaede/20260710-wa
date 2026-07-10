@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>演習：キーボード入力モニター（event.key ... ）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>キーボード入力モニター</h1>
+
+    <p class="notice">
+    ※ 半角入力（英数字）に切り替えてキーを押してください
+    </p>
+        
+      <input type="text" placeholder="何かキーを押してください" @keydown="showKey">
+
+    <div class="result">
+        <p>押したキー：{{ key }}</p>
+        <p>キーコード：{{ code }}</p>
+
+        <p>Crel：
+            <span 
+            class="badge"
+            :class="{active:ctrl}"
+            >
+                {{ctrl}}
+            </span>
+        </p>
+
+        <p>Shift：
+            <span 
+            class="badge"
+            :class="{active:shift}"
+            >
+                {{shift}}
+            </span>
+        </p>
+        
+        <p>Alt：
+            <span 
+            class="badge"
+            :class="{active:alt}"
+            >
+                {{alt}}
+            </span>
+        </p>
+    </div>
+
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.gift{
+    font-size: 80px;
+    margin: 16px 0;
+}
+
+button{
+    padding: 8px 16px;
+}

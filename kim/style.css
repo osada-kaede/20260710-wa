@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.notice{
+    color:#c0392b;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.result{
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.result p{
+    margin: 12px 0;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+  padding: 2px 8px;
+  background: #ddd;
+  color: #666;
+  transition: 0.2s;
+}
+
+.badge.active {
+  background: #4caf50;
+  color: white;
+}
